@@ -2,6 +2,7 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GestionDepense"
+             xmlns:views="clr-namespace:GestionDepense.Views"
              x:Class="GestionDepense.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -11,4 +12,22 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
+
+    <Application.MainPage>
+            <Shell>
+                <TabBar x:Name="PhoneTab">
+                    <Tab  Icon="balance.svg">
+                        <ShellContent ContentTemplate="{DataTemplate views:BalancePage}"/>
+                    </Tab>
+                
+                    <Tab  Icon="add.svg">
+                        <ShellContent ContentTemplate="{DataTemplate views:AddPage}"/>
+                    </Tab>
+                
+                    <Tab Icon="transaction.svg">
+                        <ShellContent ContentTemplate="{DataTemplate views:TransacPage}"/>
+                    </Tab>
+                </TabBar>
+            </Shell>
+    </Application.MainPage>
 </Application>

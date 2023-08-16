@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionDepense.Views.AddPage"
+             Title="Enregistrement d'une transaction">
+    <StackLayout  HorizontalOptions ="FillAndExpand"
+                  Margin="30">
+        <Label HorizontalTextAlignment="Start"
+               FontSize="Subtitle"
+               Padding="0,20,0,0">
+            Titre
+        </Label>
+        <Entry Placeholder="Titre de la transaction"
+               Margin="0,0,0,30"/>
+        <Label HorizontalTextAlignment="Start"
+               FontSize="Subtitle"
+               Padding="0,20,0,0">
+            Type
+        </Label>
+        <RadioButton GroupName="typeTranasction"
+                     Content="Crédit"
+                     IsChecked="True"/>
+        <RadioButton GroupName="typeTranasction"
+                     Content="Debit"
+                     IsChecked="False"/>
+        <Label HorizontalTextAlignment="Start"
+               FontSize="Subtitle"
+               Padding="0,20,0,0">
+            Date de la transaction
+        </Label>
+        <Entry Keyboard="Numeric" Placeholder="0.00"/>
+        <Label HorizontalTextAlignment="Start"
+               FontSize="Subtitle"
+               Padding="0,20,0,0">
+            Date de la transaction
+        </Label>
+        <DatePicker/>
+        <Button VerticalOptions="EndAndExpand"
+                Margin="0,0,0,30"
+                Text ="Ajouter"/>
+    </StackLayout>
+</ContentPage>
